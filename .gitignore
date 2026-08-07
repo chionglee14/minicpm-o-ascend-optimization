@@ -1,0 +1,51 @@
+# Credentials and local configuration
+.env
+.env.*
+!.env.example
+*.key
+*.pem
+*.p12
+*.pfx
+
+# Python and editor state
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.ruff_cache/
+.mypy_cache/
+.venv/
+venv/
+.idea/
+.vscode/
+
+# Runtime logs, media, and temporary outputs
+*.log
+*.wav
+*.mp3
+*.flac
+*.mp4
+*.mov
+*.avi
+demo_runs/
+output/demo/
+results/environment/
+results/server/
+results/demo/
+tmp/
+
+# Model weights and large generated artifacts
+*.bin
+*.ckpt
+*.gguf
+*.onnx
+*.pt
+*.pth
+*.safetensors
+*.tar
+*.tar.gz
+*.tgz
+*.zip
+
+# OS files
+.DS_Store
+Thumbs.db
