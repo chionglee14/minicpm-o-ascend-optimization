@@ -1,0 +1,385 @@
+{
+  "protocol": "seed-tts-wavlm-large-cpu-paired-proxy",
+  "official_protocol": false,
+  "note": "Uses seed-tts-eval WavLM-large + ECAPA weights on CPU. The upstream cal_sim.sh is CUDA-only and the competition evaluator may differ, so this is a paired proxy rather than official ASV.",
+  "seed_tts_eval_commit": "752f4297f090c46bb1a55a1f7439e5944ddefe8d",
+  "s3prl_commit": "7ab62aaf2606d83da6c71ee74e7d16e0979edbc3",
+  "checkpoint": "/workspace/shared_assets/datasets/CowboyZ/seed-tts-eval/wavlm_large_finetune.pth",
+  "checkpoint_sha256": "51f07e3b94d9e0262a6a675ef5a087be3dd09e8c62e9d886827f44f82fe7f94b",
+  "dataset_meta": "/workspace/user_data/minicpm-vllm-omni/datasets/seedtts_testset/en/meta.lst",
+  "dataset_meta_sha256": "7cd29f701743e6c7033edbca764ddc0b979de8c4f4907eff5e5454682114661f",
+  "model_load_report": {
+    "missing_keys": [],
+    "unexpected_keys": [
+      "loss_calculator.projection.weight"
+    ]
+  },
+  "device": "cpu",
+  "threads": 32,
+  "seed": 0,
+  "num_prompts": 32,
+  "start_index": 0,
+  "end_index": 32,
+  "summary": {
+    "requested": 32,
+    "evaluated_pairs": 32,
+    "failed_pairs": 0,
+    "baseline_mean_similarity": 0.023459987569367513,
+    "baseline_median_similarity": 0.015547242015600204,
+    "candidate_mean_similarity": 0.02296496499911882,
+    "candidate_median_similarity": 0.01793795358389616,
+    "candidate_minus_baseline_similarity": -0.0004950225702486932,
+    "candidate_relative_change": -0.02110071749974244,
+    "candidate_better_pairs": 17,
+    "equal_pairs": 0,
+    "candidate_worse_pairs": 15,
+    "candidate_minus_baseline_similarity_stddev": 0.01102471121855831,
+    "paired_statistics": {
+      "available": true,
+      "delta_definition": "candidate_similarity - baseline_similarity",
+      "mean_delta_ci95": {
+        "method": "two-sided paired t interval",
+        "confidence": 0.95,
+        "degrees_of_freedom": 31,
+        "lower": -0.004469854832349966,
+        "upper": 0.00347980969185258
+      },
+      "paired_t_test": {
+        "method": "one-sample t-test on paired deltas",
+        "null_mean_delta": 0.0,
+        "alternative": "two-sided",
+        "statistic": -0.25399944493712995,
+        "pvalue": 0.8011731904554505
+      },
+      "wilcoxon_signed_rank_test": {
+        "method": "Wilcoxon signed-rank test on paired deltas",
+        "null_median_delta": 0.0,
+        "alternative": "two-sided",
+        "statistic": 255.0,
+        "pvalue": 0.8754460029304028
+      }
+    }
+  },
+  "items": [
+    {
+      "index": 0,
+      "utterance_id": "common_voice_en_20451876-common_voice_en_20451880",
+      "prompt_wav": "/workspace/user_data/minicpm-vllm-omni/datasets/seedtts_testset/en/prompt-wavs/common_voice_en_20451876.wav",
+      "baseline_wav": "/workspace/user_data/minicpm-vllm-omni/results/accuracy/baseline/wavs/00000_common_voice_en_20451876-common_voice_en_20451880_en.wav",
+      "candidate_wav": "/workspace/user_data/minicpm-vllm-omni/results/accuracy/steps9/wavs/00000_common_voice_en_20451876-common_voice_en_20451880_en.wav",
+      "baseline_similarity": 0.131129652261734,
+      "candidate_similarity": 0.1279786229133606,
+      "candidate_minus_baseline_similarity": -0.003151029348373413
+    },
+    {
+      "index": 1,
+      "utterance_id": "common_voice_en_19724850-common_voice_en_19724900",
+      "prompt_wav": "/workspace/user_data/minicpm-vllm-omni/datasets/seedtts_testset/en/prompt-wavs/common_voice_en_19724850.wav",
+      "baseline_wav": "/workspace/user_data/minicpm-vllm-omni/results/accuracy/baseline/wavs/00001_common_voice_en_19724850-common_voice_en_19724900_en.wav",
+      "candidate_wav": "/workspace/user_data/minicpm-vllm-omni/results/accuracy/steps9/wavs/00001_common_voice_en_19724850-common_voice_en_19724900_en.wav",
+      "baseline_similarity": -0.10163556039333344,
+      "candidate_similarity": -0.10723680257797241,
+      "candidate_minus_baseline_similarity": -0.005601242184638977
+    },
+    {
+      "index": 2,
+      "utterance_id": "common_voice_en_590785-common_voice_en_590791",
+      "prompt_wav": "/workspace/user_data/minicpm-vllm-omni/datasets/seedtts_testset/en/prompt-wavs/common_voice_en_590785.wav",
+      "baseline_wav": "/workspace/user_data/minicpm-vllm-omni/results/accuracy/baseline/wavs/00002_common_voice_en_590785-common_voice_en_590791_en.wav",
+      "candidate_wav": "/workspace/user_data/minicpm-vllm-omni/results/accuracy/steps9/wavs/00002_common_voice_en_590785-common_voice_en_590791_en.wav",
+      "baseline_similarity": -0.022209176793694496,
+      "candidate_similarity": -0.015507875010371208,
+      "candidate_minus_baseline_similarity": 0.006701301783323288
+    },
+    {
+      "index": 3,
+      "utterance_id": "common_voice_en_631730-common_voice_en_631729",
+      "prompt_wav": "/workspace/user_data/minicpm-vllm-omni/datasets/seedtts_testset/en/prompt-wavs/common_voice_en_631730.wav",
+      "baseline_wav": "/workspace/user_data/minicpm-vllm-omni/results/accuracy/baseline/wavs/00003_common_voice_en_631730-common_voice_en_631729_en.wav",
+      "candidate_wav": "/workspace/user_data/minicpm-vllm-omni/results/accuracy/steps9/wavs/00003_common_voice_en_631730-common_voice_en_631729_en.wav",
+      "baseline_similarity": 0.1335138976573944,
+      "candidate_similarity": 0.13011334836483002,
+      "candidate_minus_baseline_similarity": -0.003400549292564392
+    },
+    {
+      "index": 4,
+      "utterance_id": "common_voice_en_603760-common_voice_en_603762",
+      "prompt_wav": "/workspace/user_data/minicpm-vllm-omni/datasets/seedtts_testset/en/prompt-wavs/common_voice_en_603760.wav",
+      "baseline_wav": "/workspace/user_data/minicpm-vllm-omni/results/accuracy/baseline/wavs/00004_common_voice_en_603760-common_voice_en_603762_en.wav",
+      "candidate_wav": "/workspace/user_data/minicpm-vllm-omni/results/accuracy/steps9/wavs/00004_common_voice_en_603760-common_voice_en_603762_en.wav",
+      "baseline_similarity": 0.05191674083471298,
+      "candidate_similarity": 0.06434980034828186,
+      "candidate_minus_baseline_similarity": 0.012433059513568878
+    },
+    {
+      "index": 5,
+      "utterance_id": "common_voice_en_17389076-common_voice_en_17389120",
+      "prompt_wav": "/workspace/user_data/minicpm-vllm-omni/datasets/seedtts_testset/en/prompt-wavs/common_voice_en_17389076.wav",
+      "baseline_wav": "/workspace/user_data/minicpm-vllm-omni/results/accuracy/baseline/wavs/00005_common_voice_en_17389076-common_voice_en_17389120_en.wav",
+      "candidate_wav": "/workspace/user_data/minicpm-vllm-omni/results/accuracy/steps9/wavs/00005_common_voice_en_17389076-common_voice_en_17389120_en.wav",
+      "baseline_similarity": 0.008716779761016369,
+      "candidate_similarity": -0.01771216094493866,
+      "candidate_minus_baseline_similarity": -0.02642894070595503
+    },
+    {
+      "index": 6,
+      "utterance_id": "common_voice_en_20068182-common_voice_en_20068193",
+      "prompt_wav": "/workspace/user_data/minicpm-vllm-omni/datasets/seedtts_testset/en/prompt-wavs/common_voice_en_20068182.wav",
+      "baseline_wav": "/workspace/user_data/minicpm-vllm-omni/results/accuracy/baseline/wavs/00006_common_voice_en_20068182-common_voice_en_20068193_en.wav",
+      "candidate_wav": "/workspace/user_data/minicpm-vllm-omni/results/accuracy/steps9/wavs/00006_common_voice_en_20068182-common_voice_en_20068193_en.wav",
+      "baseline_similarity": 0.009245794266462326,
+      "candidate_similarity": 0.011763060465455055,
+      "candidate_minus_baseline_similarity": 0.002517266198992729
+    },
+    {
+      "index": 7,
+      "utterance_id": "common_voice_en_19727183-common_voice_en_19727187",
+      "prompt_wav": "/workspace/user_data/minicpm-vllm-omni/datasets/seedtts_testset/en/prompt-wavs/common_voice_en_19727183.wav",
+      "baseline_wav": "/workspace/user_data/minicpm-vllm-omni/results/accuracy/baseline/wavs/00007_common_voice_en_19727183-common_voice_en_19727187_en.wav",
+      "candidate_wav": "/workspace/user_data/minicpm-vllm-omni/results/accuracy/steps9/wavs/00007_common_voice_en_19727183-common_voice_en_19727187_en.wav",
+      "baseline_similarity": -0.018403368070721626,
+      "candidate_similarity": -0.011618470773100853,
+      "candidate_minus_baseline_similarity": 0.006784897297620773
+    },
+    {
+      "index": 8,
+      "utterance_id": "common_voice_en_19734247-common_voice_en_19734252",
+      "prompt_wav": "/workspace/user_data/minicpm-vllm-omni/datasets/seedtts_testset/en/prompt-wavs/common_voice_en_19734247.wav",
+      "baseline_wav": "/workspace/user_data/minicpm-vllm-omni/results/accuracy/baseline/wavs/00008_common_voice_en_19734247-common_voice_en_19734252_en.wav",
+      "candidate_wav": "/workspace/user_data/minicpm-vllm-omni/results/accuracy/steps9/wavs/00008_common_voice_en_19734247-common_voice_en_19734252_en.wav",
+      "baseline_similarity": -0.005365421995520592,
+      "candidate_similarity": -0.005272187292575836,
+      "candidate_minus_baseline_similarity": 9.323470294475555e-05
+    },
+    {
+      "index": 9,
+      "utterance_id": "common_voice_en_20080005-common_voice_en_20080006",
+      "prompt_wav": "/workspace/user_data/minicpm-vllm-omni/datasets/seedtts_testset/en/prompt-wavs/common_voice_en_20080005.wav",
+      "baseline_wav": "/workspace/user_data/minicpm-vllm-omni/results/accuracy/baseline/wavs/00009_common_voice_en_20080005-common_voice_en_20080006_en.wav",
+      "candidate_wav": "/workspace/user_data/minicpm-vllm-omni/results/accuracy/steps9/wavs/00009_common_voice_en_20080005-common_voice_en_20080006_en.wav",
+      "baseline_similarity": -0.04013938829302788,
+      "candidate_similarity": -0.022581879049539566,
+      "candidate_minus_baseline_similarity": 0.017557509243488312
+    },
+    {
+      "index": 10,
+      "utterance_id": "common_voice_en_20535791-common_voice_en_20535795",
+      "prompt_wav": "/workspace/user_data/minicpm-vllm-omni/datasets/seedtts_testset/en/prompt-wavs/common_voice_en_20535791.wav",
+      "baseline_wav": "/workspace/user_data/minicpm-vllm-omni/results/accuracy/baseline/wavs/00010_common_voice_en_20535791-common_voice_en_20535795_en.wav",
+      "candidate_wav": "/workspace/user_data/minicpm-vllm-omni/results/accuracy/steps9/wavs/00010_common_voice_en_20535791-common_voice_en_20535795_en.wav",
+      "baseline_similarity": 0.04420369863510132,
+      "candidate_similarity": 0.0268967654556036,
+      "candidate_minus_baseline_similarity": -0.01730693317949772
+    },
+    {
+      "index": 11,
+      "utterance_id": "common_voice_en_209233-common_voice_en_209236",
+      "prompt_wav": "/workspace/user_data/minicpm-vllm-omni/datasets/seedtts_testset/en/prompt-wavs/common_voice_en_209233.wav",
+      "baseline_wav": "/workspace/user_data/minicpm-vllm-omni/results/accuracy/baseline/wavs/00011_common_voice_en_209233-common_voice_en_209236_en.wav",
+      "candidate_wav": "/workspace/user_data/minicpm-vllm-omni/results/accuracy/steps9/wavs/00011_common_voice_en_209233-common_voice_en_209236_en.wav",
+      "baseline_similarity": 0.12265442311763763,
+      "candidate_similarity": 0.11451192945241928,
+      "candidate_minus_baseline_similarity": -0.008142493665218353
+    },
+    {
+      "index": 12,
+      "utterance_id": "common_voice_en_19717736-common_voice_en_19717739",
+      "prompt_wav": "/workspace/user_data/minicpm-vllm-omni/datasets/seedtts_testset/en/prompt-wavs/common_voice_en_19717736.wav",
+      "baseline_wav": "/workspace/user_data/minicpm-vllm-omni/results/accuracy/baseline/wavs/00012_common_voice_en_19717736-common_voice_en_19717739_en.wav",
+      "candidate_wav": "/workspace/user_data/minicpm-vllm-omni/results/accuracy/steps9/wavs/00012_common_voice_en_19717736-common_voice_en_19717739_en.wav",
+      "baseline_similarity": -0.04017921909689903,
+      "candidate_similarity": -0.050690658390522,
+      "candidate_minus_baseline_similarity": -0.01051143929362297
+    },
+    {
+      "index": 13,
+      "utterance_id": "common_voice_en_25626822-common_voice_en_25626825",
+      "prompt_wav": "/workspace/user_data/minicpm-vllm-omni/datasets/seedtts_testset/en/prompt-wavs/common_voice_en_25626822.wav",
+      "baseline_wav": "/workspace/user_data/minicpm-vllm-omni/results/accuracy/baseline/wavs/00013_common_voice_en_25626822-common_voice_en_25626825_en.wav",
+      "candidate_wav": "/workspace/user_data/minicpm-vllm-omni/results/accuracy/steps9/wavs/00013_common_voice_en_25626822-common_voice_en_25626825_en.wav",
+      "baseline_similarity": 0.13389280438423157,
+      "candidate_similarity": 0.1477086842060089,
+      "candidate_minus_baseline_similarity": 0.013815879821777344
+    },
+    {
+      "index": 14,
+      "utterance_id": "common_voice_en_21538043-common_voice_en_21538044",
+      "prompt_wav": "/workspace/user_data/minicpm-vllm-omni/datasets/seedtts_testset/en/prompt-wavs/common_voice_en_21538043.wav",
+      "baseline_wav": "/workspace/user_data/minicpm-vllm-omni/results/accuracy/baseline/wavs/00014_common_voice_en_21538043-common_voice_en_21538044_en.wav",
+      "candidate_wav": "/workspace/user_data/minicpm-vllm-omni/results/accuracy/steps9/wavs/00014_common_voice_en_21538043-common_voice_en_21538044_en.wav",
+      "baseline_similarity": 0.09400325268507004,
+      "candidate_similarity": 0.08379147946834564,
+      "candidate_minus_baseline_similarity": -0.010211773216724396
+    },
+    {
+      "index": 15,
+      "utterance_id": "common_voice_en_22728555-common_voice_en_22728554",
+      "prompt_wav": "/workspace/user_data/minicpm-vllm-omni/datasets/seedtts_testset/en/prompt-wavs/common_voice_en_22728555.wav",
+      "baseline_wav": "/workspace/user_data/minicpm-vllm-omni/results/accuracy/baseline/wavs/00015_common_voice_en_22728555-common_voice_en_22728554_en.wav",
+      "candidate_wav": "/workspace/user_data/minicpm-vllm-omni/results/accuracy/steps9/wavs/00015_common_voice_en_22728555-common_voice_en_22728554_en.wav",
+      "baseline_similarity": -0.05262994021177292,
+      "candidate_similarity": -0.05029917508363724,
+      "candidate_minus_baseline_similarity": 0.002330765128135681
+    },
+    {
+      "index": 16,
+      "utterance_id": "common_voice_en_23589975-common_voice_en_23589976",
+      "prompt_wav": "/workspace/user_data/minicpm-vllm-omni/datasets/seedtts_testset/en/prompt-wavs/common_voice_en_23589975.wav",
+      "baseline_wav": "/workspace/user_data/minicpm-vllm-omni/results/accuracy/baseline/wavs/00016_common_voice_en_23589975-common_voice_en_23589976_en.wav",
+      "candidate_wav": "/workspace/user_data/minicpm-vllm-omni/results/accuracy/steps9/wavs/00016_common_voice_en_23589975-common_voice_en_23589976_en.wav",
+      "baseline_similarity": 0.052146945148706436,
+      "candidate_similarity": 0.06599833816289902,
+      "candidate_minus_baseline_similarity": 0.013851393014192581
+    },
+    {
+      "index": 17,
+      "utterance_id": "common_voice_en_30757408-common_voice_en_30757409",
+      "prompt_wav": "/workspace/user_data/minicpm-vllm-omni/datasets/seedtts_testset/en/prompt-wavs/common_voice_en_30757408.wav",
+      "baseline_wav": "/workspace/user_data/minicpm-vllm-omni/results/accuracy/baseline/wavs/00017_common_voice_en_30757408-common_voice_en_30757409_en.wav",
+      "candidate_wav": "/workspace/user_data/minicpm-vllm-omni/results/accuracy/steps9/wavs/00017_common_voice_en_30757408-common_voice_en_30757409_en.wav",
+      "baseline_similarity": 0.05339335650205612,
+      "candidate_similarity": 0.05941668897867203,
+      "candidate_minus_baseline_similarity": 0.006023332476615906
+    },
+    {
+      "index": 18,
+      "utterance_id": "common_voice_en_21106663-common_voice_en_21106664",
+      "prompt_wav": "/workspace/user_data/minicpm-vllm-omni/datasets/seedtts_testset/en/prompt-wavs/common_voice_en_21106663.wav",
+      "baseline_wav": "/workspace/user_data/minicpm-vllm-omni/results/accuracy/baseline/wavs/00018_common_voice_en_21106663-common_voice_en_21106664_en.wav",
+      "candidate_wav": "/workspace/user_data/minicpm-vllm-omni/results/accuracy/steps9/wavs/00018_common_voice_en_21106663-common_voice_en_21106664_en.wav",
+      "baseline_similarity": -0.08852905035018921,
+      "candidate_similarity": -0.0707927867770195,
+      "candidate_minus_baseline_similarity": 0.017736263573169708
+    },
+    {
+      "index": 19,
+      "utterance_id": "common_voice_en_19961449-common_voice_en_19961451",
+      "prompt_wav": "/workspace/user_data/minicpm-vllm-omni/datasets/seedtts_testset/en/prompt-wavs/common_voice_en_19961449.wav",
+      "baseline_wav": "/workspace/user_data/minicpm-vllm-omni/results/accuracy/baseline/wavs/00019_common_voice_en_19961449-common_voice_en_19961451_en.wav",
+      "candidate_wav": "/workspace/user_data/minicpm-vllm-omni/results/accuracy/steps9/wavs/00019_common_voice_en_19961449-common_voice_en_19961451_en.wav",
+      "baseline_similarity": -0.073253333568573,
+      "candidate_similarity": -0.07925944030284882,
+      "candidate_minus_baseline_similarity": -0.006006106734275818
+    },
+    {
+      "index": 20,
+      "utterance_id": "common_voice_en_17851231-common_voice_en_17851248",
+      "prompt_wav": "/workspace/user_data/minicpm-vllm-omni/datasets/seedtts_testset/en/prompt-wavs/common_voice_en_17851231.wav",
+      "baseline_wav": "/workspace/user_data/minicpm-vllm-omni/results/accuracy/baseline/wavs/00020_common_voice_en_17851231-common_voice_en_17851248_en.wav",
+      "candidate_wav": "/workspace/user_data/minicpm-vllm-omni/results/accuracy/steps9/wavs/00020_common_voice_en_17851231-common_voice_en_17851248_en.wav",
+      "baseline_similarity": 0.1642042100429535,
+      "candidate_similarity": 0.15980207920074463,
+      "candidate_minus_baseline_similarity": -0.004402130842208862
+    },
+    {
+      "index": 21,
+      "utterance_id": "common_voice_en_20812017-common_voice_en_20812019",
+      "prompt_wav": "/workspace/user_data/minicpm-vllm-omni/datasets/seedtts_testset/en/prompt-wavs/common_voice_en_20812017.wav",
+      "baseline_wav": "/workspace/user_data/minicpm-vllm-omni/results/accuracy/baseline/wavs/00021_common_voice_en_20812017-common_voice_en_20812019_en.wav",
+      "candidate_wav": "/workspace/user_data/minicpm-vllm-omni/results/accuracy/steps9/wavs/00021_common_voice_en_20812017-common_voice_en_20812019_en.wav",
+      "baseline_similarity": 0.03681065887212753,
+      "candidate_similarity": 0.03779204934835434,
+      "candidate_minus_baseline_similarity": 0.0009813904762268066
+    },
+    {
+      "index": 22,
+      "utterance_id": "common_voice_en_24523505-common_voice_en_24523506",
+      "prompt_wav": "/workspace/user_data/minicpm-vllm-omni/datasets/seedtts_testset/en/prompt-wavs/common_voice_en_24523505.wav",
+      "baseline_wav": "/workspace/user_data/minicpm-vllm-omni/results/accuracy/baseline/wavs/00022_common_voice_en_24523505-common_voice_en_24523506_en.wav",
+      "candidate_wav": "/workspace/user_data/minicpm-vllm-omni/results/accuracy/steps9/wavs/00022_common_voice_en_24523505-common_voice_en_24523506_en.wav",
+      "baseline_similarity": -0.04964172840118408,
+      "candidate_similarity": -0.04235437884926796,
+      "candidate_minus_baseline_similarity": 0.0072873495519161224
+    },
+    {
+      "index": 23,
+      "utterance_id": "common_voice_en_597578-common_voice_en_597577",
+      "prompt_wav": "/workspace/user_data/minicpm-vllm-omni/datasets/seedtts_testset/en/prompt-wavs/common_voice_en_597578.wav",
+      "baseline_wav": "/workspace/user_data/minicpm-vllm-omni/results/accuracy/baseline/wavs/00023_common_voice_en_597578-common_voice_en_597577_en.wav",
+      "candidate_wav": "/workspace/user_data/minicpm-vllm-omni/results/accuracy/steps9/wavs/00023_common_voice_en_597578-common_voice_en_597577_en.wav",
+      "baseline_similarity": -0.04598744213581085,
+      "candidate_similarity": -0.04592122510075569,
+      "candidate_minus_baseline_similarity": 6.621703505516052e-05
+    },
+    {
+      "index": 24,
+      "utterance_id": "common_voice_en_18200641-common_voice_en_18200790",
+      "prompt_wav": "/workspace/user_data/minicpm-vllm-omni/datasets/seedtts_testset/en/prompt-wavs/common_voice_en_18200641.wav",
+      "baseline_wav": "/workspace/user_data/minicpm-vllm-omni/results/accuracy/baseline/wavs/00024_common_voice_en_18200641-common_voice_en_18200790_en.wav",
+      "candidate_wav": "/workspace/user_data/minicpm-vllm-omni/results/accuracy/steps9/wavs/00024_common_voice_en_18200641-common_voice_en_18200790_en.wav",
+      "baseline_similarity": 0.04192139208316803,
+      "candidate_similarity": 0.044167473912239075,
+      "candidate_minus_baseline_similarity": 0.002246081829071045
+    },
+    {
+      "index": 25,
+      "utterance_id": "common_voice_en_21619912-common_voice_en_21634642",
+      "prompt_wav": "/workspace/user_data/minicpm-vllm-omni/datasets/seedtts_testset/en/prompt-wavs/common_voice_en_21619912.wav",
+      "baseline_wav": "/workspace/user_data/minicpm-vllm-omni/results/accuracy/baseline/wavs/00025_common_voice_en_21619912-common_voice_en_21634642_en.wav",
+      "candidate_wav": "/workspace/user_data/minicpm-vllm-omni/results/accuracy/steps9/wavs/00025_common_voice_en_21619912-common_voice_en_21634642_en.wav",
+      "baseline_similarity": 0.032454900443553925,
+      "candidate_similarity": 0.025535427033901215,
+      "candidate_minus_baseline_similarity": -0.00691947340965271
+    },
+    {
+      "index": 26,
+      "utterance_id": "common_voice_en_20617-common_voice_en_20619",
+      "prompt_wav": "/workspace/user_data/minicpm-vllm-omni/datasets/seedtts_testset/en/prompt-wavs/common_voice_en_20617.wav",
+      "baseline_wav": "/workspace/user_data/minicpm-vllm-omni/results/accuracy/baseline/wavs/00026_common_voice_en_20617-common_voice_en_20619_en.wav",
+      "candidate_wav": "/workspace/user_data/minicpm-vllm-omni/results/accuracy/steps9/wavs/00026_common_voice_en_20617-common_voice_en_20619_en.wav",
+      "baseline_similarity": 0.15951956808567047,
+      "candidate_similarity": 0.13760453462600708,
+      "candidate_minus_baseline_similarity": -0.02191503345966339
+    },
+    {
+      "index": 27,
+      "utterance_id": "common_voice_en_699384-common_voice_en_699385",
+      "prompt_wav": "/workspace/user_data/minicpm-vllm-omni/datasets/seedtts_testset/en/prompt-wavs/common_voice_en_699384.wav",
+      "baseline_wav": "/workspace/user_data/minicpm-vllm-omni/results/accuracy/baseline/wavs/00027_common_voice_en_699384-common_voice_en_699385_en.wav",
+      "candidate_wav": "/workspace/user_data/minicpm-vllm-omni/results/accuracy/steps9/wavs/00027_common_voice_en_699384-common_voice_en_699385_en.wav",
+      "baseline_similarity": -0.019862685352563858,
+      "candidate_similarity": -0.03209786117076874,
+      "candidate_minus_baseline_similarity": -0.01223517581820488
+    },
+    {
+      "index": 28,
+      "utterance_id": "common_voice_en_30735432-common_voice_en_30735433",
+      "prompt_wav": "/workspace/user_data/minicpm-vllm-omni/datasets/seedtts_testset/en/prompt-wavs/common_voice_en_30735432.wav",
+      "baseline_wav": "/workspace/user_data/minicpm-vllm-omni/results/accuracy/baseline/wavs/00028_common_voice_en_30735432-common_voice_en_30735433_en.wav",
+      "candidate_wav": "/workspace/user_data/minicpm-vllm-omni/results/accuracy/steps9/wavs/00028_common_voice_en_30735432-common_voice_en_30735433_en.wav",
+      "baseline_similarity": 0.08839257061481476,
+      "candidate_similarity": 0.10557408630847931,
+      "candidate_minus_baseline_similarity": 0.01718151569366455
+    },
+    {
+      "index": 29,
+      "utterance_id": "common_voice_en_678682-common_voice_en_678684",
+      "prompt_wav": "/workspace/user_data/minicpm-vllm-omni/datasets/seedtts_testset/en/prompt-wavs/common_voice_en_678682.wav",
+      "baseline_wav": "/workspace/user_data/minicpm-vllm-omni/results/accuracy/baseline/wavs/00029_common_voice_en_678682-common_voice_en_678684_en.wav",
+      "candidate_wav": "/workspace/user_data/minicpm-vllm-omni/results/accuracy/steps9/wavs/00029_common_voice_en_678682-common_voice_en_678684_en.wav",
+      "baseline_similarity": -0.07422217726707458,
+      "candidate_similarity": -0.07710324972867966,
+      "candidate_minus_baseline_similarity": -0.002881072461605072
+    },
+    {
+      "index": 30,
+      "utterance_id": "common_voice_en_18699078-common_voice_en_18699081",
+      "prompt_wav": "/workspace/user_data/minicpm-vllm-omni/datasets/seedtts_testset/en/prompt-wavs/common_voice_en_18699078.wav",
+      "baseline_wav": "/workspace/user_data/minicpm-vllm-omni/results/accuracy/baseline/wavs/00030_common_voice_en_18699078-common_voice_en_18699081_en.wav",
+      "candidate_wav": "/workspace/user_data/minicpm-vllm-omni/results/accuracy/steps9/wavs/00030_common_voice_en_18699078-common_voice_en_18699081_en.wav",
+      "baseline_similarity": 0.0028087589889764786,
+      "candidate_similarity": -0.003790183924138546,
+      "candidate_minus_baseline_similarity": -0.006598942913115025
+    },
+    {
+      "index": 31,
+      "utterance_id": "common_voice_en_19608801-common_voice_en_19608806",
+      "prompt_wav": "/workspace/user_data/minicpm-vllm-omni/datasets/seedtts_testset/en/prompt-wavs/common_voice_en_19608801.wav",
+      "baseline_wav": "/workspace/user_data/minicpm-vllm-omni/results/accuracy/baseline/wavs/00031_common_voice_en_19608801-common_voice_en_19608806_en.wav",
+      "candidate_wav": "/workspace/user_data/minicpm-vllm-omni/results/accuracy/steps9/wavs/00031_common_voice_en_19608801-common_voice_en_19608806_en.wav",
+      "baseline_similarity": 0.021848689764738083,
+      "candidate_similarity": 0.024112846702337265,
+      "candidate_minus_baseline_similarity": 0.002264156937599182
+    }
+  ]
+}

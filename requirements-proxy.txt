@@ -1,0 +1,11 @@
+# The model service itself uses packages provided by vllm-omni:v0.25.0-a3.
+# These are only the extra packages used by the offline WER/ASV proxy scripts.
+openai-whisper==20250625
+jiwer==4.0.0
+zhon==2.1.1
+rapidfuzz==3.14.5
+librosa==0.11.0
+scipy==1.13.1
+
+# torch==2.10.0 and torchaudio==2.10.0 are supplied by the image. Do not
+# replace the image's Ascend-compatible PyTorch stack with the CPU PyPI wheel.
