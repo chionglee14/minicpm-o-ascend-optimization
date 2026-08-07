@@ -1,0 +1,28 @@
+name: offline-ci
+
+on:
+  push:
+  pull_request:
+
+permissions:
+  contents: read
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Check Python syntax
+        run: python -m compileall -q scripts
+      - name: Check shell syntax
+        run: |
+          for file in scripts/*.sh; do
+            bash -n "$file"
+          done
+      - name: Validate evidence package
+        run: python scripts/validate_submission.py
+      - name: Verify file hashes
+        run: sha256sum -c RESULT_MANIFEST.sha256

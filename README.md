@@ -46,7 +46,7 @@ configs/experiment_steps9.yaml      只改 Token2Wav 迭代 10→9 的实验配�
 scripts/collect_env.sh              保存环境指纹
 scripts/install_challenge.sh        在官方镜像内安装 challenge 分支
 scripts/start_server.sh             前台启动三阶段服务
-scripts/prepare_seed_tts_mini.sh    从只读 tar 提取 4 条快速测试数据
+scripts/prepare_seed_tts_mini.sh    从只读 tar 提取 4 行元数据与 2 条提示音频
 scripts/smoke_audio.sh              文本到流式语音冒烟测试
 scripts/run_demo.sh                 一键执行录屏所需健康检查、NPU信息和语音 Demo
 scripts/inspect_wavs.py             校验 Demo WAV 格式、时长和 SHA-256
@@ -62,7 +62,6 @@ scripts/eval_seed_tts_wavlm_proxy.py 用发布的 WavLM/ECAPA 权重做配对 AS
 scripts/validate_submission.py      离线检查配置单变量、结果完整性和代理口径
 evidence/environment/               远端运行时环境与 NPU 状态快照
 evidence/RUN_PROVENANCE.md           配置、结果和远端服务日志哈希关联说明
-tests/data/seed_tts_mini/           4 条 Seed-TTS 元数据
 reports/BASELINE.md                 当前实测证据和结论边界
 reports/EXPERIMENTS.md              单变量 A/B、回退理由和精度门禁
 reports/ASV_PROXY.md                ASV CPU 代理的完整命令、依赖和协议边界

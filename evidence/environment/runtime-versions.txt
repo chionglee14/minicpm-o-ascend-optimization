@@ -1,0 +1,10 @@
+CANN toolkit: 9.0.0
+CANN inner version: V100R001C10SPC001B250
+Architecture: aarch64
+Python: 3.12.13
+torch: 2.10.0+cpu
+torch_npu: 2.10.0
+vllm-omni: 0.25.0+npu
+vllm-omni commit: 4a0a48177862c0f1763eb4bc771358419faf8431
+vllm-ascend: 0.19.1rc2.dev1014+g8092d3f66
+vllm-ascend commit: 8092d3f66599ce07cd0aca2bcc99d14b8a9192f8
