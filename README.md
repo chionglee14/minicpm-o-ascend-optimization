@@ -1,5 +1,7 @@
 # MiniCPM-o 4.5 Ascend Optimization
 
+> 完整代码、实验原始结果与报告正在 [Draft PR #1](https://github.com/chionglee14/minicpm-o-ascend-optimization/pull/1) 中公开复核；合并前请从该 PR 或 `agent/publish-ascend-optimization` 分支查看。
+
 MiniCPM-o 4.5 在昇腾 NPU 上的 vLLM-Omni 推理适配、流式语音性能优化与可审计
 评测工程。原创代码和文档采用 [Apache-2.0](LICENSE) 许可；模型、数据集和第三方
 checkpoint 不随仓库分发，详见 [THIRD_PARTY.md](THIRD_PARTY.md)。
